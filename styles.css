@@ -10,7 +10,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-img{
+img, .spinningDancer{
   height:100px;
 }
 .title, .addDancerButton, .dinnerTimeButton{
@@ -25,15 +25,15 @@ img{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  height: 30px;
   position:absolute;
 }
 .growingDancer{
-  max-height:25%;
+  animation: slidedown 2s linear;
   position:absolute;
 }
 .spinningDancer{
+  animation: runin 3s linear;
   position:absolute;
 }
 
@@ -43,3 +43,26 @@ img{
 
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 
+@keyframes slidedown {
+  from {
+    margin-top: -50%;
+    height: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+  
+@keyframes runin {
+  from {
+    margin-left: 110%;
+    width: -100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}

@@ -30,21 +30,5 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
-  });  
-});
-
-describe('dinnerTime', function() {
-  
-  // var newGrowingDancer = new makeGrowingDancer(20, 40, 100);
-  // var newSpinningDancer = new makeSpinningDancer(40, 80, 100);
-  it('should do something', function() {
-    var newBlinkyDancer = new makeBlinkyDancer(10, 20, 100);
-    
   });
-  
-  
-  // add dancers to window.dancers
-  // trigger mouse click
-  // for each dancer in window.dancers, expect top to equal 500)
-  
 });
