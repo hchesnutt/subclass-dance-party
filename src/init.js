@@ -14,8 +14,8 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     window.dancers.push(dancer.$node);
     
-    $('.spinningDancer').on('click', function(event) {
-      $(event.target).toggleClass('flip');
+    dancer.$node.on('click', function(event) {
+      $(this).toggleClass('flip');
       console.log(event.target)
     });
     

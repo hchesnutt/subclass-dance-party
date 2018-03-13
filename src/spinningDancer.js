@@ -2,9 +2,7 @@ var makeSpinningDancer = function(top, left, timeBetweenSteps = 900) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="spinningDancer"><img src="images/griffon.jpg"></span>');
   this.setPosition(top, left);
-  $('.spinningDancer').on('click', function(event) {
-      console.log(event);
-  });
+  
 };
 
 makeSpinningDancer.prototype = Object.create(makeDancer.prototype);
