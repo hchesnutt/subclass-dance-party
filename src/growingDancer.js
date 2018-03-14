@@ -2,7 +2,6 @@ var makeGrowingDancer = function(top, left, timeBetweenSteps = 900) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="growingDancer"><img src="images/pomeranian.png"></span>');
   this.setPosition(top, left);
-
 };
 
 makeGrowingDancer.prototype = Object.create(makeDancer.prototype);

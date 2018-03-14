@@ -33,13 +33,20 @@ describe('blinkyDancer', function() {
   });  
 });
 
-describe('dinnerTime', function() {
+describe('Closest Dancer', function() {
+  window.dancers = [];
   
-  // var newGrowingDancer = new makeGrowingDancer(20, 40, 100);
-  // var newSpinningDancer = new makeSpinningDancer(40, 80, 100);
-  it('should do something', function() {
-    var newBlinkyDancer = new makeBlinkyDancer(10, 20, 100);
-    
+  it('findClosestDancerHandler should move closest dancer next to dancer focal object', function() {
+    var blinkyDancer = (new makeBlinkyDancer(10, 10, 100)).$node;
+    var growingDancer = (new makeGrowingDancer(20, 20, 100)).$node;
+    var spinningDancer = (new makeSpinningDancer(40, 40, 100)).$node;
+    window.dancers.push(blinkyDancer, growingDancer, spinningDancer);
+    var growingDancerPosition = growingDancer.position();
+    var blinkyDancerPosition = blinkyDancer.position();
+    console.log(growingDancer.left)
+    console.log(blinkyDancerPosition)
+    findClosestDancerHandler.call(blinkyDancer);
+    expect(growingDancerPosition.left).to.equal(blinkyDancerPosition.left + 75);
   });
   
   

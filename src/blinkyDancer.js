@@ -9,7 +9,7 @@ makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 makeBlinkyDancer.prototype.step = function() {
-  var oldStep = makeDancer.prototype.step
+  var oldStep = makeDancer.prototype.step;
   // call the old version of step at the beginning of any call to this new version of step
   oldStep.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
